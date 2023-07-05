@@ -1,4 +1,4 @@
-import { useAppDispatch, useAppSelector } from "../store/store";
+import { useAppDispatch } from "../store/store";
 import { useRef } from "react";
 import { setRoomId } from "../store/state/state-reudcer";
 import { signOut } from "firebase/auth";
