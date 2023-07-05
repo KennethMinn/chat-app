@@ -46,11 +46,10 @@ const Chat = () => {
       const updatedMessages: messagesType[] = [];
       snapShot.forEach((doc) => {
         const data = doc.data() as messagesType; // Cast doc.data() to MessageType
-        const message: messagesType = {
-          ...data,
+        updatedMessages.push({
+          ...data, // {...doc.data() , id : doc.id}
           id: doc.id,
-        };
-        updatedMessages.push(message);
+        });
       });
       setMessages(updatedMessages);
     });
